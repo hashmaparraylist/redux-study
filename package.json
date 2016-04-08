@@ -4,19 +4,27 @@
   "description": "A Redux Study Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --content-base app/ --progress --colors"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^0.14.8",
+    "react-redux": "^4.4.1",
     "redux": "^3.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "cross-env": "^1.0.7",
+    "html-webpack-plugin": "^2.15.0",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
   }
 }
