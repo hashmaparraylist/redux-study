@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
     devtool: 'inline-source-map',
@@ -8,17 +8,17 @@ var config = {
     entry: [
         './index.jsx',
     ],
-    plugins: [
-        new htmlWebpackPlugin({
-            inject: 'head',
-            template: 'index.html'
-        }),
-        new webpack.HotModuleReplacementPlugin()
-    ],
     output: {
         path: __dirname + '/app',
         filename: './build/bundle.js'
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            inject: 'body',
+            template: 'index.html'
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
     resolve: {
         root: __dirname + '/app',
     },
